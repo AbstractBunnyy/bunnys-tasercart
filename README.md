@@ -100,11 +100,10 @@ end)
 
 - this goes in smallresoureces>server>consumables
 ```lua
- QBCore.Functions.CreateUseableItem("taser_cardridge", function(source, item)
+QBCore.Functions.CreateUseableItem("taser_cartridge", function(source, item)
     local src = source
     local Player = QBCore.Functions.GetPlayer(source)
     if not Player.Functions.RemoveItem(item.name, 1, item.slot) then return end
-        TriggerClientEvent("FillTaser", source)
-    end
-end) 
+    TriggerClientEvent("FillTaser", source)
+end)
 ```
